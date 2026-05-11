@@ -8,6 +8,7 @@ extends CharacterBody3D
 @onready var game_ui = get_tree().current_scene.get_node("GameUI")
 
 var bones_collected: int = 0
+var total_bones_needed: int = 3
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
@@ -52,4 +53,8 @@ func collect_bone() -> void:
 	bones_collected += 1
 	print("Bones collected: ", bones_collected)
 	game_ui.update_bone_count(bones_collected)
+	
+	if bones_collected >= total_bones_needed:
+		print("All bones collected!")
+		game_ui.show_level_complete()
 	
