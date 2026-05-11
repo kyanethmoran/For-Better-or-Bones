@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cppqbtxcye0x5" path="res://scripts/player.gd" id="1_dnjla"]
 [ext_resource type="PackedScene" uid="uid://bk1w73dmleuwi" path="res://assets/KayKit_Skeletons_1.1_FREE/characters/gltf/Skeleton_Minion.glb" id="2_3eadt"]
+[ext_resource type="PackedScene" uid="uid://du7g280ojrwos" path="res://assets/KayKit_Skeletons_1.1_FREE/Animations/gltf/Rig_Medium/Rig_Medium_MovementBasic.glb" id="3_tory2"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6p3mc"]
 
@@ -20,3 +21,9 @@ transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.965
 current = true
 
 [node name="SkeletonVisual" parent="." unique_id=2051290331 instance=ExtResource("2_3eadt")]
+visible = false
+
+[node name="AnimatedSkeletonVisual" parent="." unique_id=905487639 instance=ExtResource("3_tory2")]
+
+[editable path="SkeletonVisual"]
+[editable path="AnimatedSkeletonVisual"]

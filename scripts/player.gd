@@ -4,6 +4,8 @@ extends CharacterBody3D
 @export var jump_velocity: float = 4.5
 @export var gravity: float = 9.8
 
+@onready var anim_player: AnimationPlayer = $AnimatedSkeletonVisual/AnimationPlayer
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity*delta
@@ -18,7 +20,7 @@ func _physics_process(delta: float) -> void:
 	var direction := Vector3(input_dir.x, 0, input_dir.y).normalized()
 	
 	if direction.length()>0:
-		$SkeletonVisual.look_at(global_position - direction, Vector3.UP)
+		$AnimatedSkeletonVisual.look_at(global_position - direction, Vector3.UP)
 	
 	if direction:
 		velocity.x = direction.x * move_speed
@@ -29,5 +31,16 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
+		
+	if not is_on_floor():
+		play_animation("Jump_Idle")
+	elif direction.length() > 0:
+		play_animation("Walking_A")
+	else:
+		play_animation("T-Pose")
 	
 	move_and_slide()
+	
+func play_animation(anim_name: String) -> void:
+	if anim_player.current_animation != anim_name:
+		anim_player.play(anim_name)
