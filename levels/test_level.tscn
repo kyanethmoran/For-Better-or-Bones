@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://1usnbdhm5a3"]
+
+[ext_resource type="PackedScene" uid="uid://hqvlsiat2tgb" path="res://characters/player.tscn" id="1_46lwt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_srpys"]
+size = Vector3(10, 0.2, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_srpys"]
+size = Vector3(10, 0.2, 10)
+
+[node name="TestLevel" type="Node3D" unique_id=1436583243]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1603545983]
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=115933517]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=859930821]
+mesh = SubResource("BoxMesh_srpys")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=694409028]
+shape = SubResource("BoxShape3D_srpys")
+
+[node name="Player" parent="." unique_id=1963345648 instance=ExtResource("1_46lwt")]
