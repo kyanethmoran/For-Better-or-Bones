@@ -8,3 +8,6 @@ func update_bone_count(amount: int ) -> void:
 
 func show_level_complete() -> void:
 	objective_label.text = "All bones collected!"
+
+func update_objective(message: String) -> void:
+	objective_label.text = message

@@ -57,4 +57,7 @@ func collect_bone() -> void:
 	if bones_collected >= total_bones_needed:
 		print("All bones collected!")
 		game_ui.show_level_complete()
+		
+func has_collected_all_bones() -> bool:
+	return bones_collected >= total_bones_needed
 	

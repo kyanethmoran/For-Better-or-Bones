@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://xxt7c7aon7hm"]
+
+[ext_resource type="Script" uid="uid://dwy4bnktthumk" path="res://scenes/interactables/dungeon_exit.gd" id="1_te1ac"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_pjkso"]
+size = Vector3(1, 2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_te1ac"]
+size = Vector3(2.9511719, 3, 1)
+
+[node name="DungeonExit" type="Area3D" unique_id=1000552928]
+script = ExtResource("1_te1ac")
+
+[node name="Visual" type="MeshInstance3D" parent="." unique_id=6517199]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.7291117, 1.153269, 1.1498883)
+mesh = SubResource("BoxMesh_pjkso")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=609862353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8598373, 0.66448045, 0.8745527)
+shape = SubResource("BoxShape3D_te1ac")
