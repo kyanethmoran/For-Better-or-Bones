@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cllje6ulp78ub"]
+
+[ext_resource type="Script" uid="uid://dpn5dr3vv4g56" path="res://scripts/bone_pickup.gd" id="1_adxgm"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_vdu3x"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_adxgm"]
+
+[node name="BonePickup" type="Area3D" unique_id=1872262186]
+script = ExtResource("1_adxgm")
+
+[node name="Visual" type="MeshInstance3D" parent="." unique_id=320263195]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_vdu3x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=595598447]
+shape = SubResource("SphereShape3D_adxgm")
