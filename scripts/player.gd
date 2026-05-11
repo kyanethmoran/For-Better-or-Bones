@@ -6,6 +6,8 @@ extends CharacterBody3D
 
 @onready var anim_player: AnimationPlayer = $AnimatedSkeletonVisual/AnimationPlayer
 
+var bones_collected: int = 0
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity*delta
@@ -44,3 +46,8 @@ func _physics_process(delta: float) -> void:
 func play_animation(anim_name: String) -> void:
 	if anim_player.current_animation != anim_name:
 		anim_player.play(anim_name)
+		
+func collect_bone() -> void:
+	bones_collected += 1
+	print("Bones collected: ", bones_collected)
+	
