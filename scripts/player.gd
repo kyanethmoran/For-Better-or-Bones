@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var gravity: float = 9.8
 
 @onready var anim_player: AnimationPlayer = $AnimatedSkeletonVisual/AnimationPlayer
+@onready var game_ui = get_tree().current_scene.get_node("GameUI")
 
 var bones_collected: int = 0
 
@@ -50,4 +51,5 @@ func play_animation(anim_name: String) -> void:
 func collect_bone() -> void:
 	bones_collected += 1
 	print("Bones collected: ", bones_collected)
+	game_ui.update_bone_count(bones_collected)
 	
