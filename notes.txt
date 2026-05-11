@@ -1,0 +1,59 @@
+For Better or Bones — Progress Notes
+
+I started development on For Better or Bones, a cozy dark-fantasy dungeon crawler about a skeleton trying to restore his wife by finding her missing bones in dungeons. The game combines dungeon crawling, puzzles, light combat, resource gathering, and home restoration.
+
+The main gameplay loop I am building toward is:
+	Start at the house → enter a dungeon → collect bones/resources → return home → restore the house
+
+So far, I have chosen Godot as the game engine, started the project, and built the first basic player prototype. I created a player scene with a placeholder body, collision, a camera attached to the player, and working movement controls. The player can now move in all directions and jump.
+
+I also started setting up GitHub so I can track progress, keep a history of changes, and document the development process over time. I have also started planning how I will handle assets, using free CC0 packs for now and possibly creating custom low-poly assets later in Blender or similar tools.
+
+What I Have Done So Far:
+	Created the main concept and story
+	Named the game For Better or Bones
+	Chose Godot as the engine
+	Started the prototype
+	Built the basic player scene
+	Added placeholder body and collision
+	Attached the camera to the player
+	Set up movement inputs
+	Got movement and jumping working
+	Started setting up GitHub/version control
+	Started thinking through the asset workflow
+
+What I Still Need To Do:
+	Commit the current working version to GitHub
+	Build a simple greybox test level
+	Add a dungeon entrance placeholder
+	Add the first collectible bone
+	Add a basic bone counter UI
+	Create a simple home restoration test interaction
+
+Future Systems:
+	Combat
+	Health and damage
+	Enemies
+	Dungeon rooms
+	Puzzles
+	Inventory and resources
+	Home restoration upgrades
+	Better character models and animations
+	Sound effects and music
+	Menus and UI
+	Saving and loading
+	Steam page, screenshots, trailer, and release planning
+
+Main Goal Right Now:
+	My current goal is to build the first playable loop:
+		House → dungeon → collect bone → return home → restore something
+	Once that loop works, I can start improving the game with better visuals, enemies, puzzles, story details, 	sound, UI, and polish.
+
+
+
+
+
+
+
+
+

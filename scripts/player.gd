@@ -17,6 +17,9 @@ func _physics_process(delta: float) -> void:
 	
 	var direction := Vector3(input_dir.x, 0, input_dir.y).normalized()
 	
+	if direction.length()>0:
+		$SkeletonVisual.look_at(global_position - direction, Vector3.UP)
+	
 	if direction:
 		velocity.x = direction.x * move_speed
 		velocity.z = direction.z * move_speed
