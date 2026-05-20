@@ -9,7 +9,7 @@ extends CharacterBody3D
 
 var bones_collected: int = 0
 var total_bones_needed: int = 3
-
+	
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity*delta
@@ -60,4 +60,5 @@ func collect_bone() -> void:
 		
 func has_collected_all_bones() -> bool:
 	return bones_collected >= total_bones_needed
+	
 	
